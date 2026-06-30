@@ -1,0 +1,34 @@
+version: 0.2
+
+env:
+  variables:
+    BUILD_DIR: "dist"
+    PACKAGE_DIR: "data-viz-chart-library"
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - echo "Configuring private registry for @thryvlabs scope..."
+      - printf '@thryvlabs:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=%s\n' "$GITHUB_PACKAGES_TOKEN" > $PACKAGE_DIR/.npmrc
+      - echo "Installing dependencies..."
+      - cd $PACKAGE_DIR && npm install
+
+  build:
+    commands:
+      - echo "Building data-viz-chart-library..."
+      - npm run build
+
+  post_build:
+    commands:
+      - echo "Syncing build output to S3..."
+      - aws s3 sync $BUILD_DIR/ s3://$BUCKET_NAME/ --delete
+      - echo "Creating CloudFront invalidation..."
+      - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
+      - echo "Deployment of data-viz-chart-library completed successfully."
+
+artifacts:
+  base-directory: data-viz-chart-library/dist
+  files:
+    - '**/*'
