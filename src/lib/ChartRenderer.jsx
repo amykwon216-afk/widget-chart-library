@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import * as echarts from 'echarts';
-import { DexIcon } from '@thryvlabs/dex-react';
+import { DexIcon } from '../mocks/dex-react/index.jsx';
 import { tokens } from '../styles/tokens.js';
 import { ce, fV, fmtTableCell, useW, buildLabels, pickedXAxisIndices, fmtDateLabel, DONUT_COLORS, buildMultiSeries, fmtAxisTick, yAxisCharLimit, yAxisReservedWidth, buildYAxisOpt, niceAxisMax, niceAxisRange } from './chartHelpers.js';
 

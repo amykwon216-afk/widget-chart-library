@@ -1,5 +1,5 @@
 import React from 'react';
-import { DexDropdownMenu, DexDropdownMenuItem, DexIcon } from '@thryvlabs/dex-react';
+import { DexDropdownMenu, DexDropdownMenuItem, DexIcon } from '../mocks/dex-react/index.jsx';
 import { tokens } from '../styles/tokens.js';
 import { ce } from '../lib/chartHelpers.js';
 

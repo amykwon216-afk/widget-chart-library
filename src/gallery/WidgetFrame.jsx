@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { DexCard } from '@thryvlabs/dex-react';
+import { DexCard } from '../mocks/dex-react/index.jsx';
 
 // A flex-item widget chrome. Fills its parent slot (width: 100%, height: 100%).
 export default function WidgetFrame({

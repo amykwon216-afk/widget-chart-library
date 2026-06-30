@@ -1,9 +1,8 @@
 // Design system tokens for the chart gallery prototype.
-// Mapped to @thryvlabs/dex-react CSS custom properties via
-// data-theme="keap" on <html>. Tokens with a direct DEX equivalent
-// reference the CSS variable. The only non-DEX literals are the chart
-// palette (ECharts canvas cannot read CSS custom properties) and
-// colors.text.inverse (#FFFFFF, same reason — used for canvas axis labels).
+// CSS custom properties (--dex-*) are defined in src/styles/dex-vars.css.
+// Tokens with a direct DEX equivalent reference the CSS variable.
+// The only non-DEX literals are the chart palette (ECharts canvas cannot
+// read CSS custom properties) and colors.text.inverse (#FFFFFF, same reason).
 
 export const tokens = {
   colors: {

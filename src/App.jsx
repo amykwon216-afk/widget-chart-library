@@ -1,6 +1,6 @@
 import React from 'react';
-import { DexProvider, DexTooltipProvider, DexNotificationProvider, DexNotificationViewport } from '@thryvlabs/dex-react';
-import '@thryvlabs/dex-react/dist/style.css';
+import { DexProvider, DexTooltipProvider, DexNotificationProvider, DexNotificationViewport } from './mocks/dex-react/index.jsx';
+import './styles/dex-vars.css';
 import { tokens } from './styles/tokens.js';
 import ChartGallery from './gallery/ChartGallery.jsx';
 

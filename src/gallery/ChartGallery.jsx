@@ -4,7 +4,7 @@
 // widget-frame toggle floats in the upper-right of the gray main area
 // without a container.
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { DexInput, DexSwitch, DexIcon, DexTooltip, DexDropdownMenu, DexModal, DexModalBody, DexModalContent, DexModalHeading, DexModalFooter, DexButton, DexLink, useNotification } from '@thryvlabs/dex-react';
+import { DexInput, DexSwitch, DexIcon, DexTooltip, DexDropdownMenu, DexModal, DexModalBody, DexModalContent, DexModalHeading, DexModalFooter, DexButton, DexLink, useNotification } from '../mocks/dex-react/index.jsx';
 import { tokens } from '../styles/tokens.js';
 import { CHART_CATALOG, getCatalogEntry, getAllVariants } from '../chartCatalog.js';
 import { BM } from './galleryData.js';

@@ -8,7 +8,4 @@ export default defineConfig({
   resolve: {
     dedupe: ['react', 'react-dom', 'react/jsx-runtime'],
   },
-  optimizeDeps: {
-    include: ['@thryvlabs/dex-react'],
-  },
 })
